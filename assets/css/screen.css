@@ -24,7 +24,6 @@ h1 {
     font-size: 50px; 
 }
 article { 
-
     display: block; 
     text-align: left; 
     width: 650px; 
@@ -51,5 +50,35 @@ img {
 /*     Mobile SUPPORT     */
 /*------------------------*/
 @media only screen and (max-width: 900px) {
+    body {
+        padding: 125px 50px 0px 50px;
+        font-size: 18px;
+    }
+    h1 { 
+        font-size: 35px; 
+    }
+    article {
+        width: 300px; 
+    }
+    img {
+        padding-bottom: 50px;
+        width: 15rem;
+    }
+}
 
+@media only screen and (max-width: 780px) {
+    body {
+        padding: 75px 20px 0px 40px;
+        font-size: 17px;
+    }
+    h1 { 
+        font-size: 30px; 
+    }
+    article {
+        width: 300px; 
+    }
+    img {
+        padding-bottom: 50px;
+        width: 15rem;
+    }
 }
