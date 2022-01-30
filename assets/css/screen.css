@@ -111,7 +111,7 @@ div {
 /*     Mobile SUPPORT     */
 /*------------------------*/
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
     .launch-progress .step {
         font-size: 1rem;
     }
@@ -128,7 +128,7 @@ div {
         width: 500px; 
     }
     img {
-        padding-bottom: 5px;
+        padding-bottom: 1.5rem;
         width: 20rem;
     }
 }
