@@ -18,7 +18,7 @@ body {
     text-align: center; 
     padding: 180px;
     color: #4de2c9;
-    background-color: black; 
+    background-color: black;
 }
 h1 { 
     font-size: 50px; 
@@ -37,6 +37,12 @@ a {
 
 img {
     width: 25rem;
+}
+
+div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*---------------------*/
 /* CONTAINING ELEMENTS */
