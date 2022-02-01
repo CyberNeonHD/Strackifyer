@@ -52,6 +52,9 @@ div {
 /*------------------------*/
 /* PAGE SPECIFIC ELEMENTS */
 /*------------------------*/
+#red {
+    color: red;
+}
 .launch-progress {
     display: table;
     width: 100%;
