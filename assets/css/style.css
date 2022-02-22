@@ -85,7 +85,6 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
 	transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -622,3 +621,36 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+
+/* REBRANDING */
+.alert {
+	padding: 4rem;
+	margin-top: 8rem;
+	background-color: #f44336;
+	color: white;
+	opacity: 1;
+	transition: opacity 0.6s;
+	z-index: 1;
+}
+.alert strong{
+	font-size: 4rem;
+}
+.alert p{
+	font-size: 2.5rem;
+}
+  
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 5rem;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+  
+.closebtn:hover {
+	color: black;
+}
