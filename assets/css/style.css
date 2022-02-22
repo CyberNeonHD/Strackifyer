@@ -635,6 +635,7 @@ p {
 }
 .alert strong{
 	font-size: 4rem;
+	animation: blinker 1s linear infinite;
 }
 .alert p{
 	font-size: 2.5rem;
@@ -653,4 +654,11 @@ p {
   
 .closebtn:hover {
 	color: black;
+}
+
+  
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
 }
