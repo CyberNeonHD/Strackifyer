@@ -144,7 +144,7 @@ p {
 }
 #header .nav-list ul li a:hover {
 	color: rgb(20, 220, 80);
-	font-size: 2rem;
+	font-size: 1.75rem;
 	transition: 0.5s;
 }
 #header .hamburger {
@@ -370,6 +370,9 @@ p {
 	font-weight: 500;
 	margin-top: 10px;
 }
+#stages .stage-info h2 span{
+	color: rgb(20, 220, 80);
+}
 #stages .stage-info p {
 	color: white;
 }
@@ -386,8 +389,8 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 50%);
+	opacity: 0.25;
 }
 #stages .stage-img img {
 	transition: 0.3s ease transform;
@@ -621,44 +624,3 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
-
-
-/* REBRANDING */
-.alert {
-	padding: 4rem;
-	margin-top: 8rem;
-	background-color: #f44336;
-	color: white;
-	opacity: 1;
-	transition: opacity 0.6s;
-	z-index: 1;
-}
-.alert strong{
-	font-size: 4rem;
-	animation: blinker 1s linear infinite;
-}
-.alert p{
-	font-size: 2.5rem;
-}
-  
-.closebtn {
-	margin-left: 15px;
-	color: white;
-	font-weight: bold;
-	float: right;
-	font-size: 5rem;
-	line-height: 20px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-  
-.closebtn:hover {
-	color: black;
-}
-
-  
-@keyframes blinker {
-	50% {
-	  opacity: 0;
-	}
-}
