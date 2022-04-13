@@ -299,9 +299,9 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	padding: 30px;
+	padding: 2.5rem;
 	border-radius: 10px;
-	margin: 10px 5%;
+	margin: 2rem;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -536,7 +536,8 @@ p {
 	/* features Section */
 	#features .feature-bottom .feature-item {
 		flex-basis: 45%;
-		margin: 2.5%;
+		margin: 2rem;
+		padding: 3rem;
 	}
 	/* End features Section */
 
