@@ -4,29 +4,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/stats.css">
-  <script src=""></script>
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script src="./assets/js/init.js"></script>
+  <script src="./assets/js/stats.js"></script>
   <title>strackifyer - Stats</title>
 </head>
 
 <body>
-  <header>
-    <div>
-        <img src="/img/logo_transparent.png" alt="strackifyer" title="strackifyer">
-    </div>
-</header>
-<main>
-    <article>
-        <h1>Coming soon! <span></span></h1>
-        <div>
-            <p>The first stage is almost there. I'm currently working on the <a href="https://oauth.net/2/pkce/">PKCE extension</a> so that everyting is secure.
-               Once that is finshed, I will work on the API data and after that I just need to add a calculation for the top 3 album function and then stage 1 is ready to be released.
-               <br>Release date of stage 1 is 17/04/2022.
-               <span></span>
-            </p>
-            <p>&mdash; Strackifyer <span></span></p>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <h1><span>S</span>trackify<span>er</span></h1>
+            </div>
         </div>
-    </article>
-</main>
+        </div>
+    </section>
+    <!-- End Header -->
+    <!-- Personal stats header -->
+    <section id="personal-stats">
+        <h2>Your <span>Personal</span> Stats</h2>
+        <nav class="navMenu">
+            <ul>
+              <li><a href="#" id="artists">top 10 artists</a></li>
+              <li><a href="#" id="tracks">top 10 tracks</a></li>
+              <li><a href="#" id="albums">top 3 albums</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- End Personal stats header -->
+        <!-- Personal stats header -->
+        <section id="api-data">
+            <h2>Your <span>top 10 artists</span></h2>
+            <div id="card-data">
+                <div class="card-container">
+                    <span class="position">#1</span>
+                    <img class="round" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="user" />
+                    <h3>NF</h3>
+                    <h6>Main genre</h6>
+                    <div class="skills">
+                        <h6>Genre</h6>
+                        <ul>
+                            <li>UI / UX</li>
+                            <li>Front End Development</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <span class="position">#2</span>
+                    <img class="round" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="user" />
+                    <h3>NF</h3>
+                    <h6>Main genre</h6>
+                    <div class="skills">
+                        <h6>Genre</h6>
+                        <ul>
+                            <li>UI / UX</li>
+                            <li>Front End Development</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <span class="position">#3</span>
+                    <img class="round" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="user" />
+                    <h3>NF</h3>
+                    <h6>Main genre</h6>
+                    <div class="skills">
+                        <h6>Genre</h6>
+                        <ul>
+                            <li>UI / UX</li>
+                            <li>Front End Development</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <span class="position">#4</span>
+                    <img class="round" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="user" />
+                    <h3>NF</h3>
+                    <h6>Main genre</h6>
+                    <div class="skills">
+                        <h6>Genre</h6>
+                        <ul>
+                            <li>UI / UX</li>
+                            <li>Front End Development</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Personal stats header -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+        <div class="brand">
+            <h3><span>S</span>trackify<span>er</span></h3>
+        </div>
+        <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+        <p>Copyright © 2022 Strackifyer</p>
+        </div>
+    </section>
+    <!-- End Footer -->
 </body>
 </html>

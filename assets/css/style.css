@@ -35,6 +35,9 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.05rem;
 }
+span {
+	color: rgb(20, 220, 80);
+}
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -43,9 +46,6 @@ p {
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
-}
-.section-title span {
-	color: rgb(20, 220, 80);
 }
 
 .btnLogin {
@@ -65,13 +65,10 @@ p {
 	color: white;
 	background-color: rgb(20, 220, 80);
 }
-.brand h2 {
+.brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
-}
-.brand span {
-	color: rgb(20, 220, 80);
 }
 
 /* Header section */
@@ -230,16 +227,6 @@ p {
 }
 
 /* Repetitive code due to a bug when added togheter */
-#home h1 {
-	display: block;
-	width: fit-content;
-	position: relative;
-	color: transparent;
-	font-size: 4rem;
-	animation: text_reveal_name 1.5s ease forwards;
-	animation-delay: 1.8s;
-	
-}
 #home h2 {
 	display: block;
 	width: fit-content;
@@ -249,16 +236,6 @@ p {
 	animation: text_reveal 1s ease forwards;
 	animation-delay: 1.3s;
 }
-#home h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: rgb(20, 220, 80);
-	animation: text_reveal_box 1.5s ease;
-	animation-delay: 1.5s;
-}
 
 #home h2 span {
 	position: absolute;
@@ -266,9 +243,29 @@ p {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: rgb(20, 220, 80);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 1s;
+}
+
+#home h3 {
+	display: block;
+	width: fit-content;
+	position: relative;
+	color: transparent;
+	font-size: 6rem;
+	animation: text_reveal_name 1.5s ease forwards;
+	animation-delay: 1.8s;
+	
+}
+
+#home h3 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	animation: text_reveal_box 1.5s ease;
+	animation-delay: 1.5s;
 }
 
 /* End home Section */
@@ -370,9 +367,6 @@ p {
 	font-weight: 500;
 	margin-top: 10px;
 }
-#stages .stage-info h2 span{
-	color: rgb(20, 220, 80);
-}
 #stages .stage-info p {
 	color: white;
 }
@@ -461,9 +455,6 @@ p {
 	min-height: 200px;
 	flex-direction: column;
 }
-#footer span {
-	color: rgb(20, 220, 80);
-}
 #footer h3 {
 	color: white;
 	font-weight: bold;
@@ -480,7 +471,126 @@ p {
 	color: rgb(20, 220, 80);
 }
 /* End Footer */
+/* CCS SPECIFICLY FOR STATS HTML */
+#personal-stats {
+	margin-top: 8rem;
+	text-align: center;
+}
+#personal-stats h2{
+	margin-top: 15rem;
+	color: #f6f4e6;
+	font-size: 4rem;
+	margin-bottom: 5rem;
+}
+.navMenu {
+	text-align: center;
+}
+.navMenu ul li{
+	color: #f6f4e6;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1.5rem 3rem 1.5rem 3rem;
+	display: inline;
+	max-width: fit-content;
+}
+.navMenu a{
+	color: #f6f4e6;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.3s ease;
+}
 
+.navMenu a:hover {
+	font-size: 2.40rem;
+	color: rgb(20, 220, 80);
+	transition: 0.3s ease;
+}
+#api-data{
+	margin: 2.5rem auto 5rem auto;
+	width: 85%;
+}
+#api-data h2{
+	color: #f6f4e6;
+	font-size: 2.5rem;
+}
+#card-data{
+	padding: 3rem;
+}
+
+.card-container {
+	display: inline-block;
+	background-color: rgb(20, 220, 80);
+	margin: 1rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+	color: black;
+	padding-top: 30px;
+	position: relative;
+	width: 35rem;
+	max-width: 100%;
+	text-align: center;
+}
+
+.card-container h3 {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.card-container h6 {
+	font-size: 1.75rem;
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+
+.card-container p {
+	font-size: 14px;
+	line-height: 21px;
+}
+.card-container img {
+	max-width: 15rem;
+}
+.card-container .position {
+	color: rgb(20, 220, 80);
+	background-color: black;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.card-container .round {
+	border: 0.275rem solid rgb(20, 220, 80);
+	border-radius: 50%;
+	padding: 7px;
+}
+
+.skills {
+	background-color: rgb(20, 220, 80);
+	text-align: left;
+	padding: 1rem 2rem 2rem 2rem;
+	margin-top: 1rem;
+	border-radius: 1rem;
+}
+.skills h6 {
+	margin-bottom: 2rem;
+}
+.skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
+/* END CCS SPECIFICLY FOR STATS HTML */
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
