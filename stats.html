@@ -7,13 +7,22 @@
   <link rel="stylesheet" href="../assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <script src="./assets/js/init.js"></script>
-  <script src="./assets/js/stats.js"></script>
+  <!-- HTML SPECIFIC -->
+  <script src="./assets/js/init-stats.js"></script>
+  <script src="./assets/js/html-specific/stats.js"></script>
+  <script src="./assets/js/html-specific/navBar.js"></script>
+  <!-- HTML SPECIFIC -->
+  <!-- SPOTIFY API -->
+  <script src="./assets/js/api-handling/spotify-api-handler.js"></script>
+  <script src="./assets/js/api-data/top10Artists.js"></script>
+  <script src="./assets/js/api-data/top10Tracks.js"></script>
+  <script src="./assets/js/api-data/to3Albums.js"></script>
+  <!-- SPOTIFY API -->
   <title>Strackifyer - Stats</title>
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Heder -->
     <section id="header">
         <div class="header container">
         <div class="nav-bar">
@@ -49,33 +58,17 @@
     <!-- End Personal stats header -->
         <!-- Personal stats header -->
         <section id="api-data">
-            <div id="card-data" class="hide">
-                <h2>Your <span>top 10 artists</span></h2>
-                <div class="card-container">
-                    <span class="position">#1</span>
-                    <img class="round" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="user" />
-                    <h3>NF</h3>
-                    <h6>Main genre</h6>
-                    <div class="skills">
-                        <h6>Genre</h6>
-                        <ul>
-                            <li>UI / UX</li>
-                            <li>Front End Development</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
+            <div id="card-data">
+                <div id="information" class="green">
+                    <h2>Welcome to Strackifyer</h2>
+                    <h3>Beta V0.1</h3>
+                    <p>Strackifyer just released as beta V0.1. Because I'm not sure if things will work smoothly, the first couple of weeks will remain in beta.
+                        This version depicts "Stage 1" in its early stages. You can view your top ten artists and top ten songs from the previous four weeks.
+                        Because this is a beta version, things may still be unstable and errors may occur. Keep in mind that this version isn't mobile friendly at all.
+                        Only the main information page is mobile friendly. This project is still being worked on heavily.
+                        From now on, you may expect regular updates on this project.
+                    </p>
                 </div>
-            </div>
-            <div id="information">
-                <h2>Welcome to Strackifyer</h2>
-                <h3>Beta V0.1</h3>
-                <p>Strackifyer has only recently been released as a beta 0.1 version. Because I'm not sure if things will work smoothly, the first couple of weeks will remain in beta.
-                    This version depicts "Stage 1" in its early stages. You can view your top ten artists and top ten songs from the previous four weeks.
-                    You'll also be able to see the top three albums in your collection, although keep in mind that this is based on your most recent four weeks of listening.
-                    Because this is a beta version, things may still be unstable and errors may occur. This project is still being worked on.
-                    From now on, you may expect regular updates on this project.
-                </p>
             </div>
         </section>
         <!-- End Personal stats header -->

@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="../assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   
-  <script src="./assets/js/init.js"></script>
-  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/init-index.js"></script>
+  <script src="./assets/js/html-specific/index.js"></script>
+  <script src="./assets/js/html-specific/navBar.js"></script>
+  <script src="./assets/js/api-handling/auth.js"></script>
   <title>Strackifyer</title>
 </head>
 <body>
@@ -46,7 +48,7 @@
       <div>
         <h2>Welcome <span></span></h2>
         <h1>to strackifyer <span></span></h1>
-        <a href="/stats.html" type="button" class="btnLogin">Log-in</a>
+        <a href="#" type="button" class="btnLogin" onclick="requestAuthorization()">Log-in</a>
       </div>
     </div>
   </section>
