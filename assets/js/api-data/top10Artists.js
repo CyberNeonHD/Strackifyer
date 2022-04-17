@@ -29,7 +29,7 @@ function displayTopArtists(data){
     for(let artists = 0; artists < data.length; artists++) {
         artistsDisplay += `<div class="card-container">
             <span class="position">#${artists + 1}</span>
-            <img class="round" src="${data[artists].images[2].url}" alt="user" />
+            <img class="round" src="${data[artists].images[1].url}" alt="user" />
             <h3>${data[artists].name}</h3>
             <h6>Followers: ${data[artists].followers.total}</h6>
             <div class="skills">
