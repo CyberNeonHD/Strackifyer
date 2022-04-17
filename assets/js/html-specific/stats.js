@@ -1,14 +1,1 @@
-'use strict';
-
-function selectedOption(e) {
-    const navOptions = e.target.closest('a').innerHTML;
-    if(navOptions === 'top 10 artists'){
-        fetchArtists();
-    }
-    else if(navOptions === 'top 10 tracks'){
-        fetchTracks();
-    }
-    else if(navOptions === 'top 3 albums'){
-        displayNotReady();
-    }
-}
+'use strict';(function(_0x24a838,_0x2fc6d9){const _0xd1107c=_0x430e,_0x5c66e2=_0x24a838();while(!![]){try{const _0x52d0ce=parseInt(_0xd1107c(0x1b1))/0x1+parseInt(_0xd1107c(0x1b5))/0x2+-parseInt(_0xd1107c(0x1b8))/0x3*(parseInt(_0xd1107c(0x1b3))/0x4)+-parseInt(_0xd1107c(0x1af))/0x5+parseInt(_0xd1107c(0x1b7))/0x6+-parseInt(_0xd1107c(0x1bd))/0x7*(parseInt(_0xd1107c(0x1b9))/0x8)+parseInt(_0xd1107c(0x1bc))/0x9;if(_0x52d0ce===_0x2fc6d9)break;else _0x5c66e2['push'](_0x5c66e2['shift']());}catch(_0x2d54f1){_0x5c66e2['push'](_0x5c66e2['shift']());}}}(_0x4177,0xce44a));function _0x4177(){const _0xe6fd3a=['7457400dXPxTY','3wBawoj','23728dgyxAh','top\x2010\x20tracks','top\x2010\x20artists','6859152dNTzjj','3647xzSYSc','5301590STJKEh','top\x203\x20albums','1306622CIicpi','innerHTML','5471044fLGqVc','target','3013178hNvkkh','closest'];_0x4177=function(){return _0xe6fd3a;};return _0x4177();}function _0x430e(_0x1cf19a,_0x506b08){const _0x4177e4=_0x4177();return _0x430e=function(_0x430e30,_0x3ab5e3){_0x430e30=_0x430e30-0x1af;let _0x2cc9fb=_0x4177e4[_0x430e30];return _0x2cc9fb;},_0x430e(_0x1cf19a,_0x506b08);}function selectedOption(_0x8dfa36){const _0x1e3e22=_0x430e,_0x17e32b=_0x8dfa36[_0x1e3e22(0x1b4)][_0x1e3e22(0x1b6)]('a')[_0x1e3e22(0x1b2)];if(_0x17e32b===_0x1e3e22(0x1bb))fetchArtists();else{if(_0x17e32b===_0x1e3e22(0x1ba))fetchTracks();else _0x17e32b===_0x1e3e22(0x1b0)&&displayNotReady();}}
