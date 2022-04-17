@@ -6,8 +6,8 @@ const redirect_uri = "http://127.0.0.1:5500/stats.html";
 let access_token = null;
 let refresh_token = null;
 
-const client_id = localStorage.getItem("client_id");
-const client_secret = localStorage.getItem("client_secret");
+const client_id = process.env.clientId;
+const client_secret = process.env.clientSecret;
 
 const TOKEN = "https://accounts.spotify.com/api/token";
 
@@ -62,8 +62,6 @@ function callAuthorizationApi(body){
 function handleAuthorizationResponse(){
     if ( this.status === 200 ){
         const data = JSON.parse(this.responseText);
-        console.log(data);
-        //let data = JSON.parse(this.responseText);
         if ( data.access_token !== undefined ){
             access_token = data.access_token;
             localStorage.setItem("access_token", access_token);
@@ -75,7 +73,6 @@ function handleAuthorizationResponse(){
     }
     else {
         console.log(this.responseText);
-        alert(this.responseText);
     }
 }
 

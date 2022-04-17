@@ -17,7 +17,6 @@ function handleArtistsResponse(){
     }
     else {
         console.log(this.responseText);
-        alert(this.responseText);
     }
 }
 
