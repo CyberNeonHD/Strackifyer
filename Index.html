@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="Bf5loNRIT45IL_6cAQ9qZ9Coh3W-6hFzRhQq3f0amG4" />
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   
+  <script src="./assets/js/init-index.js"></script>
+  <script src="./assets/js/html-specific/index.js"></script>
+  <script src="./assets/js/html-specific/navBar.js"></script>
+  <script src="./assets/js/api-handling/auth.js"></script>
   <title>Strackifyer</title>
 </head>
-
 <body>
   <!-- Header -->
   <section id="header">
@@ -26,8 +31,8 @@
           </div>
           <ul>
             <li><a href="#home" data-after="Home">Home</a></li>
-            <li><a href="#features" data-after="feature">features</a></li>
-            <li><a href="#stages" data-after="stages">Stages</a></li>
+            <li><a href="#features" data-after="Feature">features</a></li>
+            <li><a href="#stages" data-after="Stages">Stages</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
@@ -43,7 +48,7 @@
       <div>
         <h2>Welcome <span></span></h2>
         <h1>to strackifyer <span></span></h1>
-        <a href="/stats.html" type="button" class="btnLogin">More info</a>
+        <a href="#" type="button" class="btnLogin" onclick="requestAuthorization()">Log-in</a>
       </div>
     </div>
   </section>
@@ -54,10 +59,11 @@
     <div class="features container">
       <div class="feature-top">
         <h2 class="section-title"><span>Features</span></h2>
-        <p>The features listed below are those that the site will offer in the future.
-          Strackifyer is a work in progress that is currently being developed.
-          This is my first major project, and I intend to do everything in my power to make the design and features as good as possible.
-          Suggestions are always appreciated. 
+        <p>Strackifyer is a website that displays your personal Spotify statistics without storing any user information.
+          This is a current work-in-progress project, for additional information, see the stages.
+          The features listed below are those that will be available on the site in the future.
+          This is my first significant project, and I plan to do all in my ability to make the design and features as good as possible.
+          Suggestions are always welcome.
         </p>
       </div>
       <div class="feature-bottom">
@@ -122,7 +128,7 @@
         <div class="stage-item">
           <div class="stage-info">
             <h1>Stage 2</h1>
-            <h2>The start - better desing</h2>
+            <h2>The start - better design</h2>
             <p>Stage 2 will be primarily focused on thinking about more features, improving the design for showcasing the stats, and cleaning some code and optimizing some code.
               Some more back-end stuff for future implaments.
             </p>
@@ -199,25 +205,25 @@
         <div class="contact-item">
           <div class="icon"><img src="https://img.icons8.com/cute-clipart/64/000000/twitter.png" alt="icon"></div>
           <div class="contact-info">
-            <h1>Twitter</h1>
-            <h2><a href="https://twitter.com/strackifyer">Main account @Strackifyer</a></h2>
-            <h2><a href="https://twitter.com/_CyberNeon_">Dev account @_CyberNeon_</a></h2>
+            <h2>Twitter</h2>
+            <h3><a href="https://twitter.com/strackifyer">Main account @Strackifyer</a></h3>
+            <h3><a href="https://twitter.com/_CyberNeon_">Dev account @_CyberNeon_</a></h3>
           </div>
         </div>
         <div class="contact-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="icon"/></div>
           <div class="contact-info">
-            <h1>Email</h1>
-            <h2>Kobbe.Vereecken@hotmail.com</h2>
-            <h2>Kobbe.vereecken.it@gmail.com</h2>
+            <h2>Email</h2>
+            <h3><a href ="mailto: Kobbe.Vereecken@hotmail.com">Kobbe.Vereecken@hotmail.com</a></h3>
+            <h3><a href ="mailto: Kobbe.vereecken.it@gmail.com">Kobbe.vereecken.it@gmail.com</a></h3>
           </div>
         </div>
         <div class="contact-item">
           <div class="icon"><img src="https://img.icons8.com/dusk/64/000000/discord-logo.png" alt="icon" /></div>
           <div class="contact-info">
-            <h1>Discord</h1>
-            <h2>TBA: Strackifyer discord</h2>
-            <h2>DM: CyberNeon#0751</h2>
+            <h2>Discord</h2>
+            <h3><a href="https://discord.io/Strackifyer">Strackifyer discord</a></h3>
+            <h3>DM: CyberNeon#0824</a></h3>
           </div>
         </div>
       </div>
@@ -229,13 +235,12 @@
   <section id="footer">
     <div class="footer container">
       <div class="brand">
-        <h3><span>S</span>trackify<span>er</span></h3>
+        <h4><span>S</span>trackify<span>er</span></h4>
       </div>
       <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+      <a href="https://www.positivessl.com/"><img src="./assets/media/positivessl.png" alt="Positivessl" title="Positivessl"></a>
       <p>Copyright © 2022 Strackifyer</p>
     </div>
   </section>
-  <!-- End Footer -->
-  <script src="/assets/js/app.js"></script>
 </body>
 </html>

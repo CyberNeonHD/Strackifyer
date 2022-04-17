@@ -4,29 +4,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/stats.css">
-  <script src=""></script>
-  <title>strackifyer - Stats</title>
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- HTML SPECIFIC -->
+  <script src="./assets/js/init-stats.js"></script>
+  <script src="./assets/js/html-specific/stats.js"></script>
+  <script src="./assets/js/html-specific/navBar.js"></script>
+  <!-- HTML SPECIFIC -->
+  <!-- SPOTIFY API -->
+  <script src="./assets/js/api-handling/spotify-api-handler.js"></script>
+  <script src="./assets/js/api-data/top10Artists.js"></script>
+  <script src="./assets/js/api-data/top10Tracks.js"></script>
+  <script src="./assets/js/api-data/to3Albums.js"></script>
+  <!-- SPOTIFY API -->
+  <title>Strackifyer - Stats</title>
 </head>
 
 <body>
-  <header>
-    <div>
-        <img src="/img/logo_transparent.png" alt="strackifyer" title="strackifyer">
-    </div>
-</header>
-<main>
-    <article>
-        <h1>Coming soon! <span></span></h1>
-        <div>
-            <p>The first stage is almost there. I'm currently working on the <a href="https://oauth.net/2/pkce/">PKCE extension</a> so that everyting is secure.
-               Once that is finshed, I will work on the API data and after that I just need to add a calculation for the top 3 album function and then stage 1 is ready to be released.
-               <br>Release date of stage 1 is 17/04/2022.
-               <span></span>
-            </p>
-            <p>&mdash; Strackifyer <span></span></p>
+    <!-- Heder -->
+    <section id="header">
+        <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <h2><span>S</span>trackify<span>er</span></h2>
+                <h3>beta V0.1</h3>
+            </div>
+            <!-- MOBILE SUPPORT + PATCH NOTE SUPPORT
+            <div class="nav-list">
+                <div class="hamburger">
+                  <div class="bar"></div>
+                </div>
+                <ul>
+                  <li><a href="#" data-after="Patch notes">Patch Notes</a></li>
+                </ul>
+            </div>
+            -->
         </div>
-    </article>
-</main>
+        </div>
+    </section>
+    <!-- End Header -->
+    <!-- Personal stats header -->
+    <section id="personal-stats">
+        <h2>Your <span>Personal</span> Stats</h2>
+        <nav class="navMenu">
+            <ul>
+              <li><a href="#" id="artists">top 10 artists</a></li>
+              <li><a href="#" id="tracks">top 10 tracks</a></li>
+              <li><a href="#" id="albums">top 3 albums</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- End Personal stats header -->
+        <!-- Personal stats header -->
+        <section id="api-data">
+            <div id="card-data">
+                <div id="information" class="green">
+                    <h2>Welcome to Strackifyer</h2>
+                    <h3>Beta V0.1</h3>
+                    <p>Strackifyer just released as beta V0.1. Because I'm not sure if things will work smoothly, the first couple of weeks will remain in beta.
+                        This version depicts "Stage 1" in its early stages. You can view your top ten artists and top ten songs from the previous four weeks.
+                        Because this is a beta version, things may still be unstable and errors may occur. 
+                        Keep in mind that the current state is still a very basic and more will come!
+                        Only the main information page is mobile friendly. This project is still being worked on heavily.
+                        From now on, you may expect regular updates on this project.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End Personal stats header -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h4><span>S</span>trackify<span>er</span></h4>
+            </div>
+            <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+            <a href="https://www.positivessl.com/"><img src="./assets/media/positivessl.png" alt="Positivessl" title="Positivessl"></a>
+            <p>Copyright © 2022 Strackifyer</p>
+        </div>
+    </section>
+    <!-- End Footer -->
 </body>
 </html>
