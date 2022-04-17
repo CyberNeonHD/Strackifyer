@@ -1,17 +1,1 @@
-'use strict';
-
-document.addEventListener('DOMContentLoaded',initIndex);
-
-function initIndex(){
-    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
-	const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-	if(hamburger){
-		hamburger.addEventListener('click', toggleActive);
-	}
-	if(menu_item){
-		menu_item.forEach((item) => {
-			item.addEventListener('click', toggleActive);
-		});
-	}
-	navBarScrollingChanges();
-}
+'use strict';const _0xdb4331=_0x2d60;function _0x2d60(_0x495bc1,_0x345ae0){const _0x186f7f=_0x186f();return _0x2d60=function(_0x2d60b4,_0x8751c5){_0x2d60b4=_0x2d60b4-0x149;let _0x4baa88=_0x186f7f[_0x2d60b4];return _0x4baa88;},_0x2d60(_0x495bc1,_0x345ae0);}(function(_0x4455cc,_0x17192b){const _0xf3d92d=_0x2d60,_0x4ce4f6=_0x4455cc();while(!![]){try{const _0x56dad2=parseInt(_0xf3d92d(0x14d))/0x1*(parseInt(_0xf3d92d(0x14e))/0x2)+-parseInt(_0xf3d92d(0x153))/0x3+parseInt(_0xf3d92d(0x15b))/0x4*(-parseInt(_0xf3d92d(0x149))/0x5)+-parseInt(_0xf3d92d(0x15a))/0x6*(parseInt(_0xf3d92d(0x156))/0x7)+-parseInt(_0xf3d92d(0x158))/0x8+parseInt(_0xf3d92d(0x154))/0x9*(parseInt(_0xf3d92d(0x14b))/0xa)+parseInt(_0xf3d92d(0x151))/0xb;if(_0x56dad2===_0x17192b)break;else _0x4ce4f6['push'](_0x4ce4f6['shift']());}catch(_0x4b4037){_0x4ce4f6['push'](_0x4ce4f6['shift']());}}}(_0x186f,0x9c943));function _0x186f(){const _0x109ad9=['2480797FKVGXD','querySelector','1529970IoleBL','73215CqjiVW','addEventListener','2358377ryOkRt','DOMContentLoaded','4483856RDRRSG','.header\x20.nav-bar\x20.nav-list\x20ul\x20li\x20a','6pqfxHt','49652EYIzcv','265lzBXwR','.header\x20.nav-bar\x20.nav-list\x20.hamburger','1480WlOhHt','querySelectorAll','53213aFeyEV','48iayIHN','click','forEach'];_0x186f=function(){return _0x109ad9;};return _0x186f();}document[_0xdb4331(0x155)](_0xdb4331(0x157),initIndex);function initIndex(){const _0x24edaf=_0xdb4331,_0x5d692d=document[_0x24edaf(0x152)](_0x24edaf(0x14a)),_0x41599c=document[_0x24edaf(0x14c)](_0x24edaf(0x159));_0x5d692d&&_0x5d692d[_0x24edaf(0x155)](_0x24edaf(0x14f),toggleActive),_0x41599c&&_0x41599c[_0x24edaf(0x150)](_0x3ee04e=>{const _0x4b8d48=_0x24edaf;_0x3ee04e[_0x4b8d48(0x155)](_0x4b8d48(0x14f),toggleActive);}),navBarScrollingChanges();}
