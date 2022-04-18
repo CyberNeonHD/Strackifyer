@@ -84,6 +84,40 @@ span {
 	font-size: 5rem;
 	margin-top: 10px;
 }
+
+/* Alert Section*/
+.alert {
+	position: absolute;
+	top: 15rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	padding: 2.5rem;
+	background-color: rgb(20, 220, 80);
+	color: white;
+}
+  
+.closebtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: 0.625rem;
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.alert p{
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+.closebtn:hover {
+	color: black;
+}
+/*END Alerd Section*/
+
 /* Header section */
 #header {
 	position: fixed;
@@ -639,7 +673,6 @@ span {
 	color: black;
 	margin-bottom: 1.5rem;
 }
-/* END PROGRESS BAR */
 /* END CCS SPECIFICLY FOR STATS HTML */
 
 /* Keyframes */
