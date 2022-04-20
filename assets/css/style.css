@@ -522,14 +522,18 @@ span {
 /* End Footer */
 /* CCS SPECIFICLY FOR STATS HTML */
 #personal-stats {
-	margin-top: 8rem;
+	margin-top: 10rem;
 	text-align: center;
 }
 #personal-stats h2{
-	margin-top: 15rem;
+	margin-top: 2rem;
 	color: #f6f4e6;
 	font-size: 4rem;
 	margin-bottom: 5rem;
+}
+#personal-stats img {
+	max-width: 60rem;
+	padding: 0 1.5rem 0 1.5rem;
 }
 .navMenu {
 	text-align: center;
@@ -559,38 +563,51 @@ span {
 	margin: 2.5rem auto 0 auto;
 	width: 85%;
 }
-#api-data h2{
-	flex: 0 0 100%;
-	color: #f6f4e6;
-	font-size: 2.5rem;
-}
+
 #card-data{
 	padding: 0 3rem 3rem 3rem;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#card-data h2{
+	flex: 0 0 100%;
+	color: #f6f4e6;
+	font-size: 2.5rem;
+	padding-left: 8rem;
+	margin-bottom: 2rem;
 }
 
 .card-container {
-	display: inline-block;
-	background-color: rgb(20, 220, 80);
-	margin: 1rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-	color: black;
-	padding: 2rem;
-	position: relative;
-	width: 45rem;
-	max-width: 100%;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    background-color: rgb(20, 220, 80);
+    margin: 1rem 1.5rem 2rem 1.5rem;
+    border-radius: 1rem;
+    color: black;
+    padding: 2rem;
+    position: relative;
+    width: 45rem;
+    max-width: 100%;
+    text-align: center;
 }
-
+.card-container a {
+	width: fit-content;
+}
 .card-container h3 {
 	font-size: 2rem;
-	margin: 10px 0;
+	color: black;
+}
+.card-container h3:hover {
+	color: white;
+	cursor: pointer;
 }
 
 .card-container h6 {
 	font-size: 1.75rem;
-	margin: 5px 0;
+	margin: 1.25rem 0 0.625rem 0;
 	text-transform: uppercase;
 }
 
@@ -599,10 +616,9 @@ span {
 	line-height: 21px;
 }
 .card-container img {
-	width: 20rem;
-	height: 20rem;
-	object-fit:cover;
-	border-radius: 50%;
+	width: 25rem;
+	height: 25rem;
+	margin: 3rem;
 }
 .card-container .position {
 	color: rgb(20, 220, 80);
@@ -615,15 +631,12 @@ span {
 	top: 30px;
 	left: 30px;
 }
-.card-container .round {
-	padding: 7px;
-}
 
 .skills {
+	width: 100%;
 	background-color: rgb(20, 220, 80);
 	text-align: left;
-	padding: 1rem 2rem 2rem 2rem;
-	margin-top: 1rem;
+	padding: 0 2rem 2rem 2rem;
 	border-radius: 1rem;
 }
 .skills h6 {
@@ -659,19 +672,22 @@ span {
 	background-color: rgb(20, 220, 80);
 }
 .red {
-	background-color: rgb(255, 8, 0);
+	background-color: rgb(223, 54, 49);
 }
 #information h2{
+	font-size: 2.75rem;
 	color: black;
+	padding: 0rem;
 }
 #information h3{
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin-bottom: 5rem;
 }
 #information p{
 	font-size: 2rem;
 	color: black;
 	margin-bottom: 1.5rem;
+	font-weight: bold;
 }
 /* END CCS SPECIFICLY FOR STATS HTML */
 
