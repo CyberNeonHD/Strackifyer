@@ -1,264 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--bs-primary: rgb(20, 220, 80);--bs-primary-rgb: 20,220,80;--bs-secondary: #ffffff;--bs-secondary-rgb: 255,255,255;height: 100%;">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="Bf5loNRIT45IL_6cAQ9qZ9Coh3W-6hFzRhQq3f0amG4" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Strackifyer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-  <link rel="icon" type="image/x-icon" href="/img/Strackifyer.ico">
-  <link rel="stylesheet" href="../assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
-  <script src="./assets/js/init-index.js"></script>
-  <script src="./assets/js/html-specific/index.js"></script>
-  <script src="./assets/js/html-specific/navBar.js"></script>
-  <script src="./assets/js/api-handling/auth.js"></script>
-  
+    <!-- SPOTIFY API -->
+    <script src="./assets/js/api-handling/auth.js"></script>
+    <!-- SPOTIFY API -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZJFMFXJK7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EGRNNDM17"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-ZZJFMFXJK7');
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-
-  <title>Strackifyer</title>
+        gtag('config', 'G-7EGRNNDM17');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
-<body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#home">
-            <h2><span>S</span>trackify<span>er</span></h2>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#home" data-after="Home">Home</a></li>
-            <li><a href="#features" data-after="Feature">features</a></li>
-            <li><a href="#stages" data-after="Stages">Stages</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Temp Alert 
-        <div class="alert">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-          <p><strong>Attention!</strong> Website accepted by Spotify, log in is possible now.</p>
-        </div> -->
-        <!-- End Temp Alert -->
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
 
-  <!-- home Section  -->
-  <section id="home">
-    <div class="home container">
-      <div>
-        <h2>Welcome <span></span></h2>
-        <h1>to strackifyer <span></span></h1>
-        <a href="#" class="btnLogin" onclick="requestAuthorization()">Log-in</a>
-      </div>
-    </div>
-  </section>
-  <!-- End home Section  -->
-
-  <!-- feature Section -->
-  <section id="features">
-    <div class="features container">
-      <div class="feature-top">
-        <h2 class="section-title"><span>Features</span></h2>
-        <p>Strackifyer is a website that displays your personal Spotify listening statistics without storing any user information.
-          This is a current work-in-progress project, for additional information, see the stages.
-          The features listed below are those that will be available on the site in the future.
-          This is my first significant project, and I plan to do all in my ability to make the design and features as good as possible.
-          Suggestions are always welcome.
-        </p>
-      </div>
-      <div class="feature-bottom">
-        <div class="feature-item">
-          <div class="icon"><img src="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-coding-engineering-itim2101-flat-itim2101.png" alt="image" /></div>
-          <h2>Top 10 artist</h2>
-          <p>Do you want to know which artist you're listening to the most?
-            Soon, you'll be able to see your top 10 Spotify artists from the last four weeks, six months, and a year.
-            This is a first-stage feature. This will be extended to your top 50 in stage 3! 
-          </p>
-        </div>
-        <div class="feature-item">
-          <div class="icon"><img src="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-coding-engineering-itim2101-flat-itim2101.png" alt="image"/></div>
-          <h2>Top 10 Tracks</h2>
-          <p>Do you want to know what songs you listen to the most?
-            Soon, you'll be able to view your top 10 Spotify tracks from the previous four weeks, six months, and a year. 
-            This is a first-stage feature. This will be extended to your top 50 in stage 3! 
-          </p>
-        </div>
-        <div class="feature-item">
-          <div class="icon"><img src="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-coding-engineering-itim2101-flat-itim2101.png" alt="image"/></div>
-          <h2>Top 3 albums (beta)</h2>
-          <p>Have you ever wondered what your favorite albums are?
-            You'll find out soon enough.
-            Since Spotify does not provide this information, I must calculate it myself.
-            Hence, why it will launch as a beta.
-            This will also extend to your top 50 in stage 3! 
-          </p>
-        </div>
-        <div class="feature-item">
-          <div class="icon"><img src="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-coding-engineering-itim2101-flat-itim2101.png" alt="image"/></div>
-          <h2>Future features</h2>
-          <p>In the later stages, you will be able to check and edit your playlist, check your recent history, and check your upcoming "hot" tracks and artists. Search for
-            a specific track, album, or artist and see the specific stats for it and much more.
-          </p>
-        </div>
-      </div> 
-    </div>
-  </section>
-  <!-- End feature Section -->
-
-  <!-- stages Section -->
-  <section id="stages">
-    <div class="stages container">
-      <div class="stages-header">
-        <h2 class="section-title">Current upcomming <span>stages</span></h2>
-      </div>
-      <div class="all-stages">
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 1</h1>
-            <h2>The start - basic <span>(Waiting on Spotify approval)</span></h2>
-            <p>Log in to Spotify and look at your top 10 artists and tracks from the last four weeks, six months, and a year.
-              You will also be able to see your top 3 albums (beta feature) from the last 4 weeks, 6 months, and last 12 months.
-              Since Spotify doesn't provide the data of your top albums, I need to calculate it myself (that's why I will add it in as beta, since there could be errors in the beginning).              
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-1.png" alt="img">
-          </div>
-        </div>
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 2</h1>
-            <h2>The start - better design</h2>
-            <p>Stage 2 will be primarily focused on thinking about more features, improving the design for showcasing the stats, and cleaning some code and optimizing some code.
-              Some more back-end stuff for future implaments.
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-2.png" alt="img">
-          </div>
-        </div>
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 3</h1>
-            <h2>More stats!!</h2>
-            <p>Yeah, you read it. Once on stage 3, all "top" stats will go into the top 50. 
-              This is also a stage where I prepare a lot of back-end code for stage 4.
-
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-3.png" alt="img">
-          </div>
-        </div>
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 4</h1>
-            <h2>The drop - extra features</h2>
-            <p>This is the moment you've been looking forward to. WOOP WOOP, MORE FEATURES. 
-              You'll be able to see and edit all of your playlists (remove and add tracks to them). 
-              Searching for tracks and albums (yeah, full albums). There's no need to manually add songs to playlists anymore. 
-              Check your recent track history to see what you've been playing. Look up a specific album, artist, or track to see what statistics are available for it. 
-              Check out what's coming up in terms of "hot" tracks and artists. This is a formula I did on my own. 
-              When you listen to a particular artist and/or song a lot in a short period of time, it becomes "hot", this will be a symbol that appears in your top lists.
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-4.png" alt="img">
-          </div>
-        </div>
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 5</h1>
-            <h2>The finish - but not the end</h2>
-            <p>After stage 4, this will be the stage where I optimize and make some more advancements to the features. When this stage is released, I see the site as "fully ready."
-              This doesn't mean I will stop supporting it. I will still think about more features to add and, of course, user feedback for more improvements and features.
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-5.png" alt="img">
-          </div>
-        </div>
-        <div class="stage-item">
-          <div class="stage-info">
-            <h1>Stage 6</h1>
-            <h2>The future</h2>
-            <p>
-              I'm not sure if this is doable, but I'll see what I can do at this point to add a system to check other data like Youtube music, Amazon music, and Deezer.
-            </p>
-          </div>
-          <div class="stage-img">
-            <img src="./img/Stage-6.png" alt="img">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End stages Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h2 class="section-title">Contact <span>info</span></h2>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/cute-clipart/64/000000/twitter.png" alt="icon"></div>
-          <div class="contact-info">
-            <h2>Twitter</h2>
-            <h3>Check out my twitter:</h3>
-            <h3><a href="https://twitter.com/_CyberNeon_">@_CyberNeon_</a></h3>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="icon"/></div>
-          <div class="contact-info">
-            <h2>Email</h2>
-            <h3>You can e-mail me here:</h3>
-            <h3><a href ="mailto:Kobbe.Vereecken@hotmail.com">Kobbe.Vereecken@hotmail.com</a></h3>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/dusk/64/000000/discord-logo.png" alt="icon" /></div>
-          <div class="contact-info">
-            <h2>Discord</h2>
-            <h3>For more information join:</h3>
-            <h3><a href="https://discord.io/Strackifyer">Strackifyer Discord</a></h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h4><span>S</span>trackify<span>er</span></h4>
-      </div>
-      <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
-      <a href="https://www.positivessl.com/"><img src="./assets/media/positivessl.png" alt="Positivessl" title="Positivessl"></a>
-      <p>Copyright © 2022 Strackifyer</p>
-    </div>
-  </section>
+<body style="background: #000000;height: 100%;">
+    <nav>
+        <nav class="navbar navbar-light navbar-expand-md fixed-top py-3" style="background: var(--bs-primary);">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="font-weight: bold;font-size: 40px;">Strackifyer</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-2" style="font-size: 20px;">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home" style="/*color: var(--bs-dark);*/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features" style="/*color: var(--bs-dark);*/">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#roadmap" style="/*color: var(--bs-dark);*/">Road Map</a></li>
+                        <li class="nav-item"></li>
+                    </ul><a class="btn btn-primary ms-md-2" role="button" data-bss-hover-animate="swing" onclick="requestAuthorization()" style="background: var(--bs-dark);font-size: 20px;color: var(--bs-secondary);">Log in</a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <main>
+        <section id="home">
+            <div class="container py-4 py-xl-5" style="min-width: 80%;">
+                <div class="row" style="margin: auto;">
+                    <div class="col-md-6 text-start text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: var(--bs-dark);">
+                        <div class="text-center" style="width: 455px;">
+                            <h2 class="text-uppercase fw-bold text-center" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true" style="color: var(--bs-secondary);">Welcome To, <br>Strackifyer</h2>
+                            <p class="text-center my-3" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-delay="50" data-aos-once="true" style="font-size: 27px;">The website that displays your personal Spotify listening statistics without storing any user information.<br></p><a class="btn btn-primary btn-lg me-2" role="button" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true" onclick="requestAuthorization()" style="/*background: rgb(20, 220, 80);*/border-color: var(--bs-primary);/*color: var(--bs-gray-900);*/font-size: 27px;">Log in</a><a class="btn btn-outline-primary btn-lg" role="button" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true" href="#features" style="border-style: solid;border-color: var(--bs-primary);/*color: var(--bs-secondary);*/font-size: 27px;">More info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" style="min-height: 300px;" src="assets/img/logo_transparent.png"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="features" class="section-spacing">
+            <div class="container py-4 py-xl-5">
+                <div class="row mb-5">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto" style="width: 700px;">
+                        <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">What is strackifyer?</h2>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true" class="w-lg-50">Strackifyer is a website that displays your personal Spotify listening statistics without storing any user information. This is a current work-in-progress project, for additional information, see the road map. The features listed below are those that will be available on the site in the future. This is my first significant project, and I plan to do all in my ability to make the design and features as good as possible. Suggestions are always welcome.<br><br></p>
+                    </div>
+                </div>
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                        <div class="card" data-aos="fade-up" data-aos-duration="2950" data-aos-delay="400" data-aos-once="true">
+                            <div class="card-body p-4" style="background: var(--bs-primary);">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                                    </svg></div>
+                                <h4 class="card-title">Top 10 artists</h4>
+                                <p class="card-text">Do you want to know which artist you're listening to the most? Soon, you'll be able to see your top 10 Spotify artists from the last four weeks, six months, and a year. This is a first-stage feature. This will be extended to your top 50 in stage 3! <br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="800" data-aos-once="true">
+                            <div class="card-body p-4" style="background: var(--bs-primary);">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 6.00086C22 3.54932 19.8148 1.6746 17.3918 2.04737L10.3918 3.1243C8.44044 3.4245 7 5.1035 7 7.07778V15.8407C6.54537 15.6248 6.0368 15.5039 5.5 15.5039C3.567 15.5039 2 17.0709 2 19.0039C2 20.9369 3.567 22.5039 5.5 22.5039C7.43296 22.5039 8.99994 20.937 9 19.004V7.07778C9 6.09064 9.72022 5.25114 10.6959 5.10104L17.6959 4.02412C18.9074 3.83773 20 4.77509 20 6.00086V12.8407C19.5454 12.6248 19.0368 12.5039 18.5 12.5039C16.567 12.5039 15 14.0709 15 16.0039C15 17.9369 16.567 19.5039 18.5 19.5039C20.433 19.5039 21.9999 17.937 22 16.004V6.00086ZM20 16.0039C20 15.1755 19.3284 14.5039 18.5 14.5039C17.6716 14.5039 17 15.1755 17 16.0039C17 16.8323 17.6716 17.5039 18.5 17.5039C19.3284 17.5039 19.9999 16.8323 20 16.0039ZM7 19.0039C7 18.1755 6.32843 17.5039 5.5 17.5039C4.67157 17.5039 4 18.1755 4 19.0039C4 19.8323 4.67157 20.5039 5.5 20.5039C6.32839 20.5039 6.99994 19.8323 7 19.0039Z" fill="currentColor"></path>
+                                    </svg></div>
+                                <h4 class="card-title">Top 10 tracks</h4>
+                                <p class="card-text">Do you want to know what songs you listen to the most? Soon, you'll be able to view your top 10 Spotify tracks from the previous four weeks, six months, and a year. This is a first-stage feature. This will be extended to your top 50 in stage 3! <br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1200" data-aos-once="true">
+                            <div class="card-body p-4">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
+                                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
+                                    </svg></div>
+                                <h4 class="card-title">Top 3 albums</h4>
+                                <p class="card-text">Have you ever wondered what your favourite albums are? You'll find out soon enough. Since Spotify does not provide this information, I must calculate it myself. Hence, why it will launch as a beta. This will also extend to your top 50 in stage 3! <br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="roadmap" class="section-spacing">
+            <div class="container py-4 py-xl-5">
+                <div class="row">
+                    <div class="col-md-8 col-xl-6 mx-auto p-4">
+                        <h2 data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300" data-aos-once="true">Road Map</h2>
+                        <div class="text-end d-flex align-items-center align-items-md-start align-items-xl-center stages" data-aos="fade-up-right" data-aos-duration="1200" data-aos-delay="500" data-aos-once="true">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                                </svg></div>
+                            <div>
+                                <h4>Stage 1</h4>
+                                <p>The ability to log into Spotify and see your own basic statistics.<br>Stats like you top 10 artist and tracks of the past <br>4 weeks, 6 months and year. This stage is also seen as beta.<br></p>
+                            </div>
+                        </div>
+                        <div class="text-start d-flex align-items-center align-items-md-start align-items-xl-center stages" data-aos="fade-up-left" data-aos-duration="1200" data-aos-delay="700" data-aos-once="true">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                                </svg></div>
+                            <div>
+                                <h4>Stage 2</h4>
+                                <p>Primarily focused on thinking about more features, improving the design for showcasing the stats, and cleaning some code and optimizing some code, as well as some more back-end code for future implements.<br></p>
+                            </div>
+                        </div>
+                        <div class="text-end d-flex align-items-center align-items-md-start align-items-xl-center stages" data-aos="fade-up-right" data-aos-duration="1200" data-aos-delay="900" data-aos-once="true">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                                </svg></div>
+                            <div>
+                                <h4>Stage 3</h4>
+                                <p>When stage 3 drops, a lot more statistics will come as well! Stats like top 100 artists/tracks and more detailed stats about the artists as well as the tracks themselves.</p>
+                            </div>
+                        </div>
+                        <div class="text-start d-flex align-items-center align-items-md-start align-items-xl-center stages" data-aos="fade-up-left" data-aos-duration="1200" data-aos-delay="300" data-aos-once="true">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                                </svg></div>
+                            <div>
+                                <h4>Stage 4</h4>
+                                <p>This is the big stage. I will drop a bunch of extra features. See and edit all of your playlists. Searching for tracks and albums to add to your playlist. Check your recent track history to see what you've been playing. Look up a specific album, artist, or track to see what statistics are available for it and many more features.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <footer class="text-center">
+            <div class="container text-muted py-4 py-lg-5">
+                <p class="mb-0">Copyright © 2022 Strackifyer</p>
+            </div>
+        </footer>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
+
 </html>
