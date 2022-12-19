@@ -37,6 +37,24 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .row {
+    padding-top: 220px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .row {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 990px) {
+  .row {
+    padding-top: 180px;
+  }
+}
+
 @media (min-width: 370px) {
   .h2, h2 {
     font-size: calc(1.325rem + .9vw);
@@ -114,9 +132,6 @@ dl, ol, ul {
 #roadmap h2 {
   text-align: center;
   margin-bottom: 5rem;
-}
-
-div {
 }
 
 .stages {
