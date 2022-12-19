@@ -2,7 +2,7 @@
 const TOPARTISTS = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10&offset=0";
 
 function fetchArtists(){
-    callApi( "GET",TOPARTISTS ,null ,handleArtistsResponse);
+    callApi( "GET",TOPARTISTS, null, handleArtistsResponse);
 }
 
 function handleArtistsResponse(){

@@ -16,8 +16,8 @@ function onPageLoad(){
 
 function handleRedirect(){
     const code = getCode();
-    fetchAccessToken( code );
-    window.history.pushState("", "", redirect_uri); // remove param from url
+    fetchAccessToken(code);
+    window.history.pushState("", "", redirect_uri);
 }
 
 function getCode(){
@@ -34,8 +34,8 @@ function fetchAccessToken( code ){
     let body = "grant_type=authorization_code";
     body += "&code=" + code; 
     body += "&redirect_uri=" + encodeURI(redirect_uri);
-    body += "&client_id=4ace47269fd943eea3258d51e7940aaf";
-    body += "&client_secret=f4ee9d37a18841f6b78158b8c50aead3";
+    body += "&client_id=" + process.env.SPOTIFY_CLIENT;
+    body += "&client_secret=" + process.env.SPOTIFY_SECRET;
     callAuthorizationApi(body);
 }
 
@@ -43,7 +43,7 @@ function refreshAccessToken(){
     refresh_token = localStorage.getItem("refresh_token");
     let body = "grant_type=refresh_token";
     body += "&refresh_token=" + refresh_token;
-    body += "&client_id=4ace47269fd943eea3258d51e7940aaf";
+    body += "&client_id=" + process.env.SPOTIFY_CLIENT;
     callAuthorizationApi(body);
 }
 
@@ -51,7 +51,7 @@ function callAuthorizationApi(body){
     const xhr = new XMLHttpRequest();
     xhr.open("POST", TOKEN, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader('Authorization', 'Basic ' + btoa("4ace47269fd943eea3258d51e7940aaf:f4ee9d37a18841f6b78158b8c50aead3"));
+    xhr.setRequestHeader('Authorization', 'Basic ' + btoa(process.env.SPOTIFY_CLIENT+":"+process.env.SPOTIFY_SECRET));
     xhr.send(body);
     xhr.onload = handleAuthorizationResponse;
 }

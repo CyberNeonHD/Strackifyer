@@ -5,12 +5,21 @@ const redirect_uri = "https://strackifyer.tech/stats.html";
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize";
 
+
+document.addEventListener('DOMContentLoaded', authenticate);
+
+function authenticate() {
+    if(document.querySelector('#auth')){
+        document.querySelector('#auth').addEventListener('click', requestAuthorization);
+    }
+}
+
 function requestAuthorization(){
     let url = AUTHORIZE;
-    url += "?client_id=4ace47269fd943eea3258d51e7940aaf";
+    url += "?client_id=" + process.env.SPOTIFY_CLIENT;
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
     url += "&show_dialog=true";
     url += "&scope=user-top-read";
-    window.location.href = url; // Show Spotify's authorization screen
+    window.location.href = url;
 }

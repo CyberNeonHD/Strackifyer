@@ -2,7 +2,7 @@
 const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10&offset=0";
 
 function fetchTracks(){
-    callApi( "GET", TOPTRACKS, null, handleTracksResponse );
+    callApi( "GET", TOPTRACKS, null, handleTracksResponse);
 }
 
 function handleTracksResponse(){
