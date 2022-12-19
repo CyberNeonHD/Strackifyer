@@ -55,7 +55,6 @@ function convertGenresToLi(genreArray){
 
 function convertRightSize(imgaesData){
     let holdCounter = 0;
-    console.log(imgaesData);
     for (let counter = 0; counter < imgaesData.length; counter++){
         if(imgaesData[counter].width <= 320){
             holdCounter = counter;

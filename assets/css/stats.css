@@ -666,7 +666,6 @@ span {
 
 #information {
 	margin: auto;
-	width: 90%;
 	border-radius: 1rem;
 	color: black;
 	font-weight: bold;
@@ -685,7 +684,7 @@ span {
 }
 #information h3{
 	font-size: 2.5rem;
-	margin-bottom: 5rem;
+	margin-bottom: 1.75rem;
 }
 #information p{
 	font-size: 2rem;
