@@ -13,7 +13,7 @@ function handleArtistsResponse(){
 
     }
     else if (this.status === 401){
-        refreshAccessToken();
+        requestAuthorization();
     }
     else {
         console.log(this.responseText);
