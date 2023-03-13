@@ -10,7 +10,6 @@ function handleArtistsResponse(){
         let data = JSON.parse(this.responseText);
         data = data.items;
         displayTopArtists(data);
-
     }
     else if (this.status === 401){
         requestAuthorization();
@@ -33,7 +32,7 @@ function displayTopArtists(data){
             <img class="round" src="${convertRightSize(data[artists].images)}" alt="user" />
             </div>
             <a href="${data[artists].external_urls.spotify}" target="_blank"><h3>${data[artists].name}</h3></a>
-            <h6>Followers: ${numberFormatter.format(data[artists].followers.total)}</h6>
+            <h6>Popularity Rating: ${data[artists].popularity}</h6>
             <div class="skills">
                 <h6>Genre</h6>
                 <ul>
