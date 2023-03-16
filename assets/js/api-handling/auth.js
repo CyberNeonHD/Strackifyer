@@ -1,7 +1,7 @@
 'use strict';
 
-//const redirect_uri = "https://strackifyer.tech/stats.html";
-const redirect_uri = "http://127.0.0.1:5500/stats.html";
+const redirect_uri = "https://strackifyer.tech/stats.html";
+//const redirect_uri = "http://127.0.0.1:5500/stats.html";
 
 document.addEventListener('DOMContentLoaded', authenticate);
 function authenticate() {
