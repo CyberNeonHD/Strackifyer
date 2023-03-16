@@ -40,33 +40,7 @@ p {
 span {
 	color: rgb(20, 220, 80);
 }
-.section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: white;
-	margin-bottom: 3rem;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
-}
 
-.btnLogin {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid rgb(20, 220, 80);
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-}
-.btnLogin:hover {
-	color: white;
-	background-color: rgb(20, 220, 80);
-}
 .brand h2, .brand h3 {
 	text-transform: uppercase;
 }
@@ -129,7 +103,7 @@ span {
 	width: 100vw;
 	height: auto;
 }
-#header .header {
+#header .container {
 	min-height: 8vh;
 	transition: 0.3s ease background-color;
 }
@@ -141,110 +115,27 @@ span {
 	height: 100%;
 	max-width: 1300px;
 	padding: 0 10px;
+	margin-left: 4rem;
 }
-#header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: rgb(31, 30, 30);
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	overflow-x: hidden;
-	transition: 0.5s ease left;
-}
-#header .nav-list ul.active {
-	left: 0%;
-}
-#header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: bold;
-	letter-spacing: 0.2rem;
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	padding: 2rem;
-	display: block;
-	transition: 0.5s;
-}
-#header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgb(20, 220, 80);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-}
-#header .nav-list ul li a:hover {
-	color: rgb(20, 220, 80);
-	transition: 0.5s;
-}
-#header .hamburger {
-	height: 60px;
-	width: 60px;
+
+#header .nav-bar #logout{
 	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(0.8);
-	margin-right: 20px;
+    background-color: #1DB954;
+    border-radius: 5px;
+    padding: 10px 20px;
+	margin-right: 4rem;
+	transition: 0.5s;
 }
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
+#header .nav-bar #logout h2{
+	color: white;
+	font-size: 1.85rem;
+	font-weight: 500;
+	transition: 0.5s;
 }
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
-}
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger .active .bar::before {
-	bottom: 0;
-}
-#header .hamburger .active .bar::after {
-	top: 0;
+
+#header .nav-bar #logout:hover{
+    background-color: #d71e1e;
+    cursor: pointer;
 }
 /* End Header section */
 
@@ -504,10 +395,9 @@ span {
 #footer {
 	background-color: rgb(0, 0, 0);
 }
-#footer .footer {
+#footer .container {
 	min-height: 18rem;
 	flex-direction: column;
-	margin-bottom: 0.625rem;
 }
 #footer p {
 	color: white;
@@ -521,7 +411,7 @@ span {
 	max-width: 20rem;
 }
 /* End Footer */
-/* CCS SPECIFICLY FOR STATS HTML */
+/* ID SECTION + CLASS SECTION DIRECT CALL (needs to be reworked) */
 #personal-stats {
 	margin-top: 2.75rem;
 	text-align: center;
@@ -533,7 +423,7 @@ span {
 	margin-bottom: 5rem;
 }
 #personal-stats img {
-	max-width: 60rem;
+	max-width: 40rem;
 	padding: 0 1.5rem 0 1.5rem;
 }
 .navMenu {
@@ -578,6 +468,7 @@ span {
 	font-size: 2.5rem;
 	padding-left: 8rem;
 	margin-bottom: 2rem;
+	align-items: center;
 }
 
 .card-container {
@@ -692,6 +583,28 @@ span {
 	margin-bottom: 1.5rem;
 	font-weight: bold;
 }
+
+#periodTracks, #periodArtists {
+	font-size: 2.3rem;
+	border: none;
+	border-radius: 4px;
+	background-color: rgb(0, 0, 0);
+	color: rgb(20, 220, 80);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	
+}
+
+#periodTracks:hover, #periodTracks:focus, #periodArtists:hover, #periodArtists:focus {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	outline: none;
+}
+
+#periodTracks option, #periodArtists option {
+	background-color: rgb(0, 0, 0);
+	color: rgb(20, 220, 80);
+}
+  
 /* END CCS SPECIFICLY FOR STATS HTML */
 
 /* Keyframes */
@@ -706,16 +619,6 @@ span {
 
 	100% {
 		opacity: 1;
-	}
-}
-@keyframes hamburger_puls {
-	0% {
-		opacity: 1;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.4);
 	}
 }
 @keyframes text_reveal_box {
@@ -742,17 +645,6 @@ span {
 /* End Keyframes */
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
-	.btnLogin {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
-	h2.section-title {
-		font-size: 6rem;
-	}
-
-	#header .nav-list ul a::after {
-		font-size: 10rem;
-	}
 	/* home */
 	#home h1 {
 		font-size: 7rem;
@@ -826,28 +718,6 @@ span {
 
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 2rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
-
 	#features .feature-bottom .feature-item {
 		flex-basis: 22%;
 		margin: 1.5%;

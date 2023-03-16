@@ -1,9 +1,64 @@
 'use strict';
-const TOPARTISTS = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10&offset=0";
+const topArtistsShort = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10&offset=0";
+const topArtistsLong = "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10&offset=0";
+const topArtistsLifeTime = "https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=10&offset=0";
 
-function fetchArtists(){
-    callApi( "GET",TOPARTISTS, null, handleArtistsResponse);
+
+function initLoadArtists() {
+    const $cardData = document.querySelector('#card-data');
+    $cardData.innerHTML = '';
+    $cardData.insertAdjacentHTML("afterbegin", 
+    `<h2>Your <span>top 10 artists</span> of the last 
+        <select id="periodArtists" style="width: 11rem;">
+            <option value="1">4 weeks</option>
+            <option value="2">6 months</option>
+            <option value="3">All time</option>
+        </select>
+    </h2>`);
+
+    callApi( "GET", topArtistsShort, null, handleArtistsResponse); // fetches the top 10 artists of the last 4 weeks (default)
+    
+    $cardData.removeEventListener('change', timePeriodTracks) // remove event listener from tracks
+    $cardData.addEventListener('change', timePeriodArtists) // after data loaded, change event listener is added to the select element
 }
+
+function timePeriodArtists(event) {
+    const $cardData = document.querySelector('#card-data');
+    if (event && event.target && event.target.matches('#periodArtists')) {
+        if (event.target.value == 1) {
+            $cardData.innerHTML = 
+            `<h2>Your <span>top 10 artists</span> of the last
+                <select id="periodArtists" style="width: 11rem;">
+                    <option value="1" selected>4 weeks</option>
+                    <option value="2">6 months</option>
+                    <option value="3">All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topArtistsShort, null, handleArtistsResponse);
+        } else if (event.target.value == 2) {
+            $cardData.innerHTML = 
+            `<h2>Your <span>top 10 artists</span> of the last
+                <select id="periodArtists"  style="width: 12rem;">
+                    <option value="1">4 weeks</option>
+                    <option value="2" selected>6 months</option>
+                    <option value="3">All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topArtistsLong, null, handleArtistsResponse);
+        } else if (event.target.value == 3) {
+            $cardData.innerHTML = 
+            `<h2>Your <span>top 10 artists</span> of
+                <select id="periodArtists" style="width: 10rem;">
+                    <option value="1">4 weeks</option>
+                    <option value="2">6 months</option>
+                    <option value="3"selected>All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topArtistsLifeTime, null, handleArtistsResponse);
+        }
+    }
+}
+
 
 function handleArtistsResponse(){
     if ( this.status === 200 ){
@@ -20,11 +75,9 @@ function handleArtistsResponse(){
 }
 
 function displayTopArtists(data){
-    let artistsDisplay = '';
-    const numberFormatter = Intl.NumberFormat('en-US');
     const $cardData = document.querySelector('#card-data');
-    $cardData.innerHTML = '';
-    $cardData.insertAdjacentHTML("afterbegin", `<h2>Your <span>top 10 artists</span> of the last 4 weeks</h2>`);
+    let artistsDisplay = '';
+    //const numberFormatter = Intl.NumberFormat('en-US');
     for(let artists = 0; artists < data.length; artists++) {
         artistsDisplay += `<div class="card-container">
             <span class="position">#${artists + 1}</span>

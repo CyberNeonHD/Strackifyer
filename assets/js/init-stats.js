@@ -15,10 +15,11 @@ function selectedMenuOption(e) {
     e.preventDefault();
     const navOptions = e.target.closest('a').innerHTML;
     if(navOptions === 'my top 10 artists'){
-        fetchArtists();
+        initLoadArtists();
     }
     else if(navOptions === 'my top 10 tracks'){
-        fetchTracks();
+        initLoadTracks();
+        
     }
     else if(navOptions === 'my top 3 albums'){
         displayNotReady();
@@ -26,7 +27,7 @@ function selectedMenuOption(e) {
 }
 
 function navBarScrollingChanges() {
-    const header = document.querySelector('.header.container');
+    const header = document.querySelector('#header .container');
     document.addEventListener('scroll', () => {
         const scroll_position = window.scrollY;
         if (scroll_position > 250) {

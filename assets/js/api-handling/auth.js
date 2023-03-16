@@ -1,13 +1,15 @@
 'use strict';
 
-const redirect_uri = "https://strackifyer.tech/stats.html";
-//const redirect_uri = "http://127.0.0.1:5500/stats.html";
+//const redirect_uri = "https://strackifyer.tech/stats.html";
+const redirect_uri = "http://127.0.0.1:5500/stats.html";
 
 document.addEventListener('DOMContentLoaded', authenticate);
-
 function authenticate() {
     if(document.querySelector('#auth')){
         document.querySelector('#auth').addEventListener('click', requestAuthorization);
+    }
+    if(document.querySelector('#logout')){
+        document.querySelector('#logout').addEventListener('click', logout);
     }
 }
 
@@ -34,4 +36,11 @@ function generateRandomString(length) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+}
+
+function logout(){
+    localStorage.removeItem("stateKey");
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("expires_in");
+    location.href = "https://strackifyer.tech"; 
 }

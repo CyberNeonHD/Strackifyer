@@ -1,8 +1,61 @@
 'use strict';
-const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10&offset=0";
+const topTracksShort = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10&offset=0";
+const topTracksLong = "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=10&offset=0";
+const topTracksLifeTime = "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=10&offset=0";
 
-function fetchTracks(){
-    callApi( "GET", TOPTRACKS, null, handleTracksResponse);
+function initLoadTracks() {
+    const $cardData = document.querySelector('#card-data');
+    $cardData.innerHTML = '';
+    $cardData.insertAdjacentHTML("afterbegin", 
+    `<h2>Your <span>top 10 tracks</span> of the last 
+        <select id="periodTracks" style="width: 11rem;">
+            <option value="1">4 weeks</option>
+            <option value="2">6 months</option>
+            <option value="3">All time</option>
+        </select>
+    </h2>`);
+
+    callApi( "GET", topTracksShort, null, handleTracksResponse); // fetches the top 10 tracks of the last 4 weeks (default)
+
+    $cardData.removeEventListener('change', timePeriodArtists) // remove event listener from artists
+    $cardData.addEventListener('change', timePeriodTracks) // after data loaded, change event listener is added to the select element
+}
+
+function timePeriodTracks(event){
+    const $cardData = document.querySelector('#card-data');
+    if (event && event.target && event.target.matches('#periodTracks')) {
+        if (event.target.value == 1) {
+            $cardData.innerHTML = 
+            `<h2>Your <span>top 10 tracks</span> of the last
+                <select id="periodTracks" style="width: 11rem;">
+                    <option value="1" selected>4 weeks</option>
+                    <option value="2">6 months</option>
+                    <option value="3">All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topTracksShort, null, handleTracksResponse);
+        } else if (event.target.value == 2) {
+            $cardData.innerHTML = 
+            `<h2>Your <span>top 10 tracks</span> of the last
+                <select id="periodTracks"  style="width: 12rem;">
+                    <option value="1">4 weeks</option>
+                    <option value="2" selected>6 months</option>
+                    <option value="3">All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topTracksLong, null, handleTracksResponse);
+        } else if (event.target.value == 3) {
+            $cardData.innerHTML = `
+            <h2>Your <span>top 10 tracks</span> of
+                <select id="periodTracks" style="width: 10rem;">
+                    <option value="1">4 weeks</option>
+                    <option value="2">6 months</option>
+                    <option value="3"selected>All time</option>
+                </select>
+            </h2>`;
+            callApi( "GET", topTracksLifeTime, null, handleTracksResponse);
+        }
+    }
 }
 
 function handleTracksResponse(){
@@ -23,8 +76,6 @@ function handleTracksResponse(){
 function displayTopTracks(data){
     let trackDisplay ='';
     const $cardData = document.querySelector('#card-data');
-    $cardData.innerHTML = '';
-    $cardData.insertAdjacentHTML("afterbegin", `<h2>Your <span>top 10 tracks</span> of the last 4 weeks</h2>`);
     for(let tracks = 0; tracks < data.length; tracks++) {
         trackDisplay += `<div class="card-container">
             <span class="position">#${tracks + 1}</span>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/stats.css">
   <link rel="icon" href="assets/img/Strackifyer.ico">
+
   <script src="./assets/js/init-stats.js"></script>
   <!-- SPOTIFY API -->
   <script src="./assets/js/api-handling/auth.js"></script>
@@ -21,23 +22,16 @@
 <body>
     <!-- Heder -->
     <section id="header">
-        <div class="header container">
-        <div class="nav-bar">
-            <div class="brand">
-                <h2><span>S</span>trackify<span>er</span></h2>
-                <h3>beta V0.1</h3>
-            </div>
-            <!-- MOBILE SUPPORT + PATCH NOTE SUPPORT
-            <div class="nav-list">
-                <div class="hamburger">
-                  <div class="bar"></div>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <h2><span>S</span>trackify<span>er</span></h2>
+                    <h3>beta V0.5</h3>
                 </div>
-                <ul>
-                  <li><a href="#" data-after="Patch notes">Patch Notes</a></li>
-                </ul>
+                <div id="logout">
+                    <h2>Log out</h2>
+                </div>
             </div>
-            -->
-        </div>
         </div>
     </section>
     <!-- End Header -->
@@ -59,30 +53,23 @@
             <div id="card-data">
                 <div id="information" class="green">
                     <h2>Welcome to Strackifyer</h2>
-                    <h3>Beta V0.1</h3>
+                    <h3>Time to revamp this project :D</h3>
                     <p>
-                        Update 19/12/2022: <br>
-                        I originally made this project as a fun side project. <br>
-                        At first very motivated, later on due to struggles (code wise) I lost the motivation. <br>
-                        Now I'm back and commited to bring this project back to life. <br>
+                        Update 16/03/2022 (Beta 0.5): <br>
+                        - Added a fancy dropdown menu to both artists and tracks for period selection.<br>
+                        - Added a logout button.<br>
+                        - Removed old CSS code.<br>
+                        - Rewritten JS functions (still needs some work).<br>
+                        
                         <br>
 
-                        What have I done? <br>
-                        - I have re-written the API handler <br>
-                        - I have re-written the authentication handling (Implicit grant flow) <br>
-                        - Optimised the code <br>
-                        - Tweaked Design <br>
+                        Update 17/03/2022: <br>
+                        - Fixed bug with event listeners. <br>
+                        
                         <br>
 
-                        Update 13/03/2022: <br>
-                        I failed to deliver, but I am not dropping this project yet. <br>
-                        Small update, API currently gives a "0" as return for the followers count of artists. <br>
-                        While looking into this I replaced the followers count by the popularity rating of Spotify. <br>
-                        <br>
-
-
-                        What's next? (This is still comming)<br>
-                        - Domain will be changed soon, more info about that is inbound <br>
+                        Upcomming changes:<br>
+                        - Domain (and rebranding), more info about that is inbound <br>
                         - Multiple functions to be included (on this page) <br>
                         - Way more data to come (TOP 50 + wider artist stats, etc)<br>
                         - Getting back on scheme with the roadmap <br>
@@ -95,7 +82,7 @@
         <!-- End Personal stats header -->
     <!-- Footer -->
     <section id="footer">
-        <div class="footer container">
+        <div class="container">
             <div class="brand">
                 <h4><span>S</span>trackify<span>er</span></h4>
             </div>
