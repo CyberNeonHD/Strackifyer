@@ -1,4 +1,5 @@
 # Strackifyer
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68fc96d7-0887-4f6d-b2f6-00328ba29643/deploy-status)](https://app.netlify.com/sites/strackifyer/deploys)
 
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
