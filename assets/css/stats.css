@@ -9,12 +9,15 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
 a {
 	text-decoration: none;
 }
+
 body {
 	background-color: rgb(0, 0, 0);
 }
+
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -534,9 +537,7 @@ span {
 	padding: 0 2rem 2rem 2rem;
 	border-radius: 1rem;
 }
-.skills h6 {
-	margin-bottom: 2rem;
-}
+
 .skills ul {
 	list-style-type: none;
 	margin: 0;
@@ -643,84 +644,168 @@ span {
 	}
 }
 /* End Keyframes */
-/* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	/* home */
-	#home h1 {
-		font-size: 7rem;
-	}
-	/* End home */
 
-	/* features Section */
-	#features .feature-bottom .feature-item {
-		flex-basis: 45%;
-		margin: 2rem;
-		padding: 3rem;
-	}
-	/* End features Section */
+/* Media Query's */
+@media screen and (max-width: 767px) {
 
-	/* stage */
-	#stages .stage-item {
-		flex-direction: row;
+	body {
+		font-size: 16px;
 	}
-	#stages .stage-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-	#stages .stage-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-	#stages .all-stages .stage-info {
-		height: 100%;
-	}
-	#stages .all-stages .stage-img {
-		height: 100%;
-	}
-	/* End stage */
 
-	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
+	h1 {
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
-	#contact .contact-items {
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.brand h2 {
+		font-size: 2rem;
+	}
+
+	.brand h3 {
+		font-size: 1.6rem;
+	}
+
+	.brand h4 {
+		font-size: 3.5rem;
+	}
+
+	.card-container {
+		padding: 0 3rem 3rem 3rem;
+	}
+
+	.card-container h3 {
+		font-size: 2rem;
+	}
+
+	.card-container h6 {
+		font-size: 1.5rem;
+	}
+
+	.nav {
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
+		margin-bottom: 20px;
+	}
+
+	.nav ul {
+		padding: 0;
 		margin: 0;
+		list-style: none;
+		text-align: center;
 	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
+
+	.nav li {
+		display: inline-block;
+		margin-right: 10px;
 	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
+
+	.nav li:last-child {
+		margin-right: 0;
 	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
+
+	.nav a {
+		display: block;
+		padding: 10px;
+		color: #333;
+		text-decoration: none;
 	}
-	#contact .contact-item .contact-info {
+
+	.navMenu a {
+		font-size: 1.8rem;
+	}
+
+	.post {
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+
+	.post h2 {
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+
+	.post p {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+
+	#card-data {
+		padding: 0rem;
+	}
+
+	#card-data h2 {
+		font-size: 1.8rem;
+		padding-left: 0rem;
+		margin-bottom: 0.625rem;
+	}
+
+	#comment-form input[type="text"], 
+	#comment-form textarea {
 		width: 100%;
-		text-align: left;
-		padding-left: 20px;
 	}
-	/* End contact  */
+
+	#comment-form input[type="submit"] {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#header .nav-bar {
+		margin-left: 2rem;
+	}
+
+	#header .nav-bar #logout {
+		margin-right: 2rem;
+	}
+
+	#header .nav-bar #logout h2 {
+		font-size: 1.4rem;
+	}
+
+	#personal-stats h2 {
+		font-size: 2.4rem;
+		margin-bottom: 0.625rem;
+	}
+
+	#personal-stats img {
+		max-width: 25rem;
+		margin-top: 5rem;
+	}
+
+	#periodArtists, #periodTracks {
+		font-size: 1.8rem;
+	}
+
+	#information h2{
+		font-size: 2rem;
+	}
+
+	#information h3{
+		font-size: 1.5rem;
+	}
+
+	#information p{
+		font-size: 1rem;
+	}
 }
-/* End Media Query For Tablet */
 
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	#features .feature-bottom .feature-item {
-		flex-basis: 22%;
-		margin: 1.5%;
+@media screen and (max-width: 435px) {
+	.skills {
+		padding: 0rem;
+	}
+
+	#card-data h2 {
+		font-size: 1.5rem;
+	}
+
+	#periodArtists, #periodTracks {
+		font-size: 1.5rem;
 	}
 }
-/* End  Media Query For Desktop */
+
+/* Media Query's */
