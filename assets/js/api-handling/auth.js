@@ -5,8 +5,11 @@ const redirect_uri = "https://strackifyer.tech/stats.html";
 
 document.addEventListener('DOMContentLoaded', authenticate);
 function authenticate() {
-    if(document.querySelector('#auth')){
-        document.querySelector('#auth').addEventListener('click', requestAuthorization);
+    if(document.querySelector('#authNav')){
+        document.querySelector('#authNav').addEventListener('click', requestAuthorization);
+    }
+    if(document.querySelector('#authSubmenu')){
+        document.querySelector('#authSubmenu').addEventListener('click', requestAuthorization);
     }
     if(document.querySelector('#logout')){
         document.querySelector('#logout').addEventListener('click', logout);

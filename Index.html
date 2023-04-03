@@ -1,53 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" style="--bs-primary: rgb(20, 220, 80);--bs-primary-rgb: 20,220,80;--bs-secondary: #ffffff;--bs-secondary-rgb: 255,255,255;height: 100%;">
+<html lang="en"
+    style="--bs-primary: rgb(20, 220, 80); --bs-primary-rgb: 20, 220, 80; --bs-secondary: #ffffff; --bs-secondary-rgb: 255, 255, 255; height: 100%">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Strackifyer</title>
-    <meta name="application-name" content="Strackifyer">
-    <meta name="description" content="Strackifyer is a website that displays your personal Spotify listening statistics without storing any user information.">
-    <meta name="keywords" content="spotify,stats,albums,tracks,artists,top,ranking,wrapped,statistics,personal,genre,top10,top50,top100">
-    <link rel="icon" href="/assets/img/Strackifyer.ico">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/aos.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css">
-    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+    <meta name="application-name" content="Strackifyer" />
+    <meta name="description"
+        content="Strackifyer is a website that displays your personal Spotify listening statistics without storing any user information." />
+    <meta name="keywords"
+        content="spotify,stats,albums,tracks,artists,top,ranking,wrapped,statistics,personal,genre,top10,top50,top100" />
+    <link rel="icon" href="/assets/img/Strackifyer.ico" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css" />
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css" />
 
     <!-- SPOTIFY API -->
     <script src="./assets/js/api-handling/auth.js"></script>
     <!-- SPOTIFY API -->
 </head>
 
-<body style="background: #000000;height: 100%;">
+<body style="background: #000000; height: 100%">
     <nav>
-        <nav class="navbar navbar-light navbar-expand-md fixed-top py-3" style="background: var(--bs-primary);">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="font-weight: bold;font-size: 40px;">Strackifyer</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-2" style="font-size: 20px;text-align: center;">
+        <nav class="navbar navbar-light navbar-expand-md fixed-top py-3" style="background: var(--bs-primary)">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#"><span
+                        style="font-weight: bold; font-size: 40px">Strackifyer</span></a><button
+                    data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
+                        class="visually-hidden">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-2" style="font-size: 20px; text-align: center">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home" style="/*color: var(--bs-dark);*/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features" style="/*color: var(--bs-dark);*/">Info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#roadmap" style="/*color: var(--bs-dark);*/">Road Map</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home"
+                                style="/*color: var(--bs-dark);*/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features"
+                                style="/*color: var(--bs-dark);*/">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#roadmap" style="/*color: var(--bs-dark);*/">Road
+                                Map</a></li>
                         <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary ms-md-2" id="auth" role="button" data-bss-hover-animate="swing" style="background: var(--bs-dark);font-size: 20px;color: var(--bs-secondary);text-align: center;">Log in</a>
+                    </ul>
+                    <a class="btn btn-primary ms-md-2" role="button" data-bss-hover-animate="swing" id="authNav"
+                        style="background: var(--bs-dark); font-size: 20px; color: var(--bs-secondary); text-align: center">Log
+                        in</a>
                 </div>
             </div>
         </nav>
     </nav>
     <main>
         <section id="home">
-            <div class="container py-4 py-xl-5" style="min-width: 80%;">
-                <div class="row" style="margin: auto;">
-                    <div class="col-md-6 text-start text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: var(--bs-dark);">
-                        <div class="text-center" style="width: 455px;">
-                            <h2 class="text-uppercase fw-bold text-center" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true" style="color: var(--bs-secondary);">Welcome To, <br>Strackifyer</h2>
-                            <p class="text-center my-3" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-delay="50" data-aos-once="true" style="font-size: 27px;">The website that displays your personal Spotify listening statistics without storing any user information.<br></p><a class="btn btn-primary btn-lg me-2" role="button" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true" id="auth" style="/*background: rgb(20, 220, 80);*/border-color: var(--bs-primary);/*color: var(--bs-gray-900);*/font-size: 27px;">Log in</a><a class="btn btn-outline-primary btn-lg" role="button" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true" href="#features" style="border-style: solid;border-color: var(--bs-primary);/*color: var(--bs-secondary);*/font-size: 27px;">More info</a>
+            <div class="container py-4 py-xl-5" style="min-width: 80%">
+                <div class="row" style="margin: auto">
+                    <div class="col-md-6 text-start text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
+                        style="color: var(--bs-dark)">
+                        <div class="text-center" style="width: 455px">
+                            <h2 class="text-uppercase fw-bold text-center" data-aos="zoom-out-down"
+                                data-aos-duration="2000" data-aos-once="true" style="color: var(--bs-secondary)">Welcome
+                                To, <br />Strackifyer</h2>
+                            <p class="text-center my-3" data-aos="zoom-out-down" data-aos-duration="2000"
+                                data-aos-delay="50" data-aos-once="true" style="font-size: 27px">The website that
+                                displays your personal Spotify listening statistics without storing any user
+                                information.<br /></p>
+                            <a class="btn btn-primary btn-lg me-2" role="button" data-aos="fade-up"
+                                data-aos-duration="2400" data-aos-once="true" id="authSubmenu"
+                                style="/*background: rgb(20, 220, 80);*/ border-color: var(--bs-primary); /*color: var(--bs-gray-900);*/ font-size: 27px">Log
+                                in</a><a class="btn btn-outline-primary btn-lg" role="button" data-aos="fade-up"
+                                data-aos-duration="2400" data-aos-once="true" href="#features"
+                                style="border-style: solid; border-color: var(--bs-primary); /*color: var(--bs-secondary);*/ font-size: 27px">More
+                                info</a>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" style="min-height: 300px;padding: 0px;margin: 10px;" src="assets/img/logo_transparent.png"></div>
+                        <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" data-aos="fade-left"
+                                data-aos-duration="2000" data-aos-once="true"
+                                style="min-height: 300px; padding: 0px; margin: 10px"
+                                src="assets/img/logo_transparent.png" /></div>
                     </div>
                 </div>
             </div>
@@ -55,42 +85,78 @@
         <section id="features" class="section-spacing">
             <div class="container py-4 py-xl-5">
                 <div class="row mb-5">
-                    <div class="col-md-8 col-xl-6 text-center mx-auto" style="width: 700px;">
-                        <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">What is strackifyer?</h2>
-                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true" class="w-lg-50">Strackifyer is a website that displays your personal Spotify listening statistics without storing any user information. This is a current work-in-progress project, for additional information, see the road map. The features listed below are those that will be available on the site in the future. This is my first significant project, and I plan to do all in my ability to make the design and features as good as possible. Suggestions are always welcome.<br><br></p>
+                    <div class="col-md-8 col-xl-6 text-center mx-auto" style="width: 700px">
+                        <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400" data-aos-once="true">What is
+                            strackifyer?</h2>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true"
+                            class="w-lg-50">Strackifyer is a website that displays your personal Spotify listening
+                            statistics without storing any user information. This is a current work-in-progress project,
+                            for additional information, see the road map. This is my first significant project, and I
+                            plan to do all in my ability to make the design and features as good as possible.
+                            Suggestions are always welcome.<br /><br /></p>
                     </div>
                 </div>
                 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
                     <div class="col">
-                        <div class="card" data-aos="fade-up" data-aos-duration="2950" data-aos-delay="400" data-aos-once="true">
-                            <div class="card-body p-4" style="background: var(--bs-primary);">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                                    </svg></div>
+                        <div class="card" data-aos="fade-up" data-aos-duration="2950" data-aos-delay="400"
+                            data-aos-once="true">
+                            <div class="card-body p-4" style="background: var(--bs-primary)">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"
+                                    style="background: #000000">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                        viewBox="0 0 16 16" class="bi bi-person">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z">
+                                        </path>
+                                    </svg>
+                                </div>
                                 <h4 class="card-title">Top 10 artists</h4>
-                                <p class="card-text">Do you want to know which artist you're listening to the most? Now you can, you are able to see your top 10 Spotify artists from the last four weeks, six months, and all-time. This will be extended to your top 50 in stage 3! <br><br></p>
+                                <p class="card-text">Do you want to know which artist you're listening to the most? Now
+                                    you can! You are able to see your top 10 Spotify artists from the last four weeks,
+                                    six months, and all time. This will be extended to your top 50 in stage 3!
+                                    <br /><br />
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="800" data-aos-once="true">
-                            <div class="card-body p-4" style="background: var(--bs-primary);height: 293px;">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 6.00086C22 3.54932 19.8148 1.6746 17.3918 2.04737L10.3918 3.1243C8.44044 3.4245 7 5.1035 7 7.07778V15.8407C6.54537 15.6248 6.0368 15.5039 5.5 15.5039C3.567 15.5039 2 17.0709 2 19.0039C2 20.9369 3.567 22.5039 5.5 22.5039C7.43296 22.5039 8.99994 20.937 9 19.004V7.07778C9 6.09064 9.72022 5.25114 10.6959 5.10104L17.6959 4.02412C18.9074 3.83773 20 4.77509 20 6.00086V12.8407C19.5454 12.6248 19.0368 12.5039 18.5 12.5039C16.567 12.5039 15 14.0709 15 16.0039C15 17.9369 16.567 19.5039 18.5 19.5039C20.433 19.5039 21.9999 17.937 22 16.004V6.00086ZM20 16.0039C20 15.1755 19.3284 14.5039 18.5 14.5039C17.6716 14.5039 17 15.1755 17 16.0039C17 16.8323 17.6716 17.5039 18.5 17.5039C19.3284 17.5039 19.9999 16.8323 20 16.0039ZM7 19.0039C7 18.1755 6.32843 17.5039 5.5 17.5039C4.67157 17.5039 4 18.1755 4 19.0039C4 19.8323 4.67157 20.5039 5.5 20.5039C6.32839 20.5039 6.99994 19.8323 7 19.0039Z" fill="currentColor"></path>
-                                    </svg></div>
+                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="800"
+                            data-aos-once="true">
+                            <div class="card-body p-4" style="background: var(--bs-primary); height: 293px">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"
+                                    style="background: #000000">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M22 6.00086C22 3.54932 19.8148 1.6746 17.3918 2.04737L10.3918 3.1243C8.44044 3.4245 7 5.1035 7 7.07778V15.8407C6.54537 15.6248 6.0368 15.5039 5.5 15.5039C3.567 15.5039 2 17.0709 2 19.0039C2 20.9369 3.567 22.5039 5.5 22.5039C7.43296 22.5039 8.99994 20.937 9 19.004V7.07778C9 6.09064 9.72022 5.25114 10.6959 5.10104L17.6959 4.02412C18.9074 3.83773 20 4.77509 20 6.00086V12.8407C19.5454 12.6248 19.0368 12.5039 18.5 12.5039C16.567 12.5039 15 14.0709 15 16.0039C15 17.9369 16.567 19.5039 18.5 19.5039C20.433 19.5039 21.9999 17.937 22 16.004V6.00086ZM20 16.0039C20 15.1755 19.3284 14.5039 18.5 14.5039C17.6716 14.5039 17 15.1755 17 16.0039C17 16.8323 17.6716 17.5039 18.5 17.5039C19.3284 17.5039 19.9999 16.8323 20 16.0039ZM7 19.0039C7 18.1755 6.32843 17.5039 5.5 17.5039C4.67157 17.5039 4 18.1755 4 19.0039C4 19.8323 4.67157 20.5039 5.5 20.5039C6.32839 20.5039 6.99994 19.8323 7 19.0039Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
                                 <h4 class="card-title">Top 10 tracks</h4>
-                                <p class="card-text">Do you want to know what songs you listen to the most? Now you can, you are able to view your top 10 Spotify tracks from the previous four weeks, six months, and all-time. This will be extended to your top 50 in stage 3! <br><br></p>
+                                <p class="card-text">Do you want to know what songs you listen to the most? Now you can!
+                                    You are able to view your top 10 Spotify tracks from the previous four weeks, six
+                                    months, and all time. This will be extended to your top 50 in stage 3!<br /><br />
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1200" data-aos-once="true">
+                        <div class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1200"
+                            data-aos-once="true">
                             <div class="card-body p-4">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon" style="background: #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
-                                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
-                                    </svg></div>
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"
+                                    style="background: #000000">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                        viewBox="0 0 16 16" class="bi bi-flag">
+                                        <path
+                                            d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z">
+                                        </path>
+                                    </svg>
+                                </div>
                                 <h4 class="card-title">Top 3 albums</h4>
-                                <p class="card-text">Have you ever wondered what your favourite albums are? You'll find out soon enough. Since Spotify does not provide this information, I must calculate it myself. Hence, why it will soon launch as a beta. This will also extend to your top 50 in stage 3! <br><br></p>
+                                <p class="card-text">Have you ever wondered what your favorite albums are? You'll find
+                                    out soon enough. This feature is inbound, and soon you will be able to see your top
+                                    albums from the previous four weeks, six months, and all time! <br /><br /></p>
                             </div>
                         </div>
                     </div>
@@ -100,38 +166,68 @@
         <section id="roadmap" class="section-spacing">
             <div class="container py-4 py-xl-5">
                 <div class="row">
-                    <div class="col-md-8 col-xl-6 mx-auto p-4" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800" data-aos-once="true">
+                    <div class="col-md-8 col-xl-6 mx-auto p-4" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="800" data-aos-once="true">
                         <h2>Road Map - 2023</h2>
                         <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                                </svg></div>
+                            <div
+                                class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path
+                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                                    </path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4><span style="color: var(--bs-primary);">Stage 1 - In progress&nbsp;</span><br></h4>
-                                <p>The ability to log into Spotify and see your own basic statistics. Stats like your top 10 artist and tracks of the past 4 weeks, 6 months and overall stats. This stage is also seen as beta.<br></p>
+                                <h4><span style="color: var(--bs-primary)">Stage 1 (Current Stage) &nbsp;</span><br />
+                                </h4>
+                                <p>The ability to log into Spotify and see your own basic statistics. Stats like your
+                                    top 10 artist and tracks of the past 4 weeks, 6 months and all time stats. This
+                                    stage
+                                    is also seen as beta.<br /></p>
                             </div>
                         </div>
-                        <hr class="my-5">
+                        <hr class="my-5" />
                         <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                                </svg></div>
+                            <div
+                                class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path
+                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                                    </path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4>Stage 2<br></h4>
-                                <p>Primarily focused on thinking about more features, improving the design for showcasing the stats, and cleaning some code and optimizing some code, as well as some more back-end code for future implements.<br></p>
+                                <h4>Stage 2<br /></h4>
+                                <p>Primarily focused on thinking about more features, improving the design for
+                                    showcasing the stats, cleaning some code, optimizing some code, as well as some more
+                                    back-end code for future implements.<br /></p>
                             </div>
                         </div>
-                        <hr class="my-5">
+                        <hr class="my-5" />
                         <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-info-circle">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                                </svg></div>
+                            <div
+                                class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    viewBox="0 0 16 16" class="bi bi-info-circle">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path
+                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                                    </path>
+                                </svg>
+                            </div>
                             <div>
                                 <h4>Stage 3</h4>
-                                <p>When stage 3 drops, a lot more statistics will come as well! Stats like top 100 artists/tracks and more detailed stats about the artists as well as the tracks themselves.<br></p>
+                                <p>When stage 3 drops, a lot more statistics will come as well! Stats like the top 100
+                                    artists and tracks, more detailed stats about the artists as well as the tracks
+                                    themselves.<br /></p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +236,7 @@
         </section>
     </main>
     <footer>
-        <footer class="text-center" style="text-align: center;">
+        <footer class="text-center" style="text-align: center">
             <div class="container text-muted py-4 py-lg-5">
                 <p class="mb-0">Copyright © 2022 Strackifyer</p>
             </div>
