@@ -45,5 +45,5 @@ function logout(){
     localStorage.removeItem("stateKey");
     localStorage.removeItem("access_token");
     localStorage.removeItem("expires_in");
-    location.href = "https://strackifyer.tech"; 
+    location.href = "https://strackifyer.netlify.app/"; 
 }
