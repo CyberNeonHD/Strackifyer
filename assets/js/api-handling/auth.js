@@ -1,6 +1,6 @@
 'use strict';
 
-const redirect_uri = "https://strackifyer.netlify.app/stats.html";
+const redirect_uri = "https://www.strackifyer.co.uk/stats.html";
 //const redirect_uri = "http://127.0.0.1:5500/stats.html";
 
 document.addEventListener('DOMContentLoaded', authenticate);
@@ -45,5 +45,5 @@ function logout(){
     localStorage.removeItem("stateKey");
     localStorage.removeItem("access_token");
     localStorage.removeItem("expires_in");
-    location.href = "https://strackifyer.netlify.app/"; 
+    location.href = "https://www.strackifyer.co.uk"; 
 }
