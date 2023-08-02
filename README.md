@@ -6,5 +6,5 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-### Strackifyer is a website that displays your personal Spotify listening statistics without storing ANY user information. This is a current work-in-progress project. Suggestions are always welcome.
-[Check out the website here :D](https://strackifyer.netlify.app/)
+### Strackifyer is a website that displays your personal Spotify listening statistics without storing ANY user information. This is a current work-in-progress project, also open source! Suggestions are always welcome.
+[Check out the website here :D](www.strackifyer.co.uk)
