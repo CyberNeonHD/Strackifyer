@@ -7,4 +7,8 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### Strackifyer is a website that displays your personal Spotify listening statistics without storing ANY user information. This is a current work-in-progress project, also open source! Suggestions are always welcome.
+
+### REBRAND is happening since V2 is around the corner. Site will fully be new, with under the hood Sveltekit + Tailwind CSS + Skeleton UI. The name and domain will also change. Strackifyer will soon be "TunePulse".
+### This means the desing will change as well as preparing for more advanced features.
+
 [Check out the website here :D](www.strackifyer.co.uk)
