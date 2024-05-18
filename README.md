@@ -20,3 +20,5 @@ In 78 days (August 2024), the strackifyer domain will be invalid, so I guess you
 About V2. It's a big learning curve going into Svelte Kit (my first JS library I learned) and Tailwind CSS.
 Other exciting things, I saw that there are some Spotify API updates that create new feature ideas.
 Why rebrand? The idea is to release a more mature "solution" with actual theming and great naming. 
+
+Check the progress of V2 here: https://github.com/CyberNeonHD/TunePulse
